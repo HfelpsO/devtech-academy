@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>DevTech Academy - Exercício 1</title>
+</head>
+<body>
+  <h1>DevTech Academy - Cadastro de Alunos</h1>
+  <p><a href="../index.html">&larr; Voltar ao menu</a></p>
+
+  <h2>Formulário</h2>
+  <form id="form-aluno" onsubmit="return false;">
+    <p>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome">
+    </p>
+    <p>
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" min="1">
+    </p>
+    <p>
+      <label for="curso">Curso:</label>
+      <select id="curso">
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+      </select>
+    </p>
+    <p>
+      <label for="notaFinal">Nota Final:</label>
+      <input type="number" id="notaFinal" min="0" max="10" step="0.1">
+    </p>
+    <p>
+      <button type="button" id="btn-salvar" onclick="cadastrar()">Cadastrar</button>
+      <button type="button" id="btn-cancelar" onclick="cancelarEdicao()" hidden>Cancelar edição</button>
+    </p>
+  </form>
+
+  <h2>Alunos cadastrados</h2>
+  <table border="1" cellpadding="4">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Curso</th>
+        <th>Nota Final</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="tabela-alunos"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
